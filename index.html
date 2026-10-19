@@ -1,0 +1,3384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kato Waidi Nubian House | بيت الضيافة النوبي كاتو ويدي - غرب سهيل، أسوان (Where Peace Is)</title>
+  <meta name="description" content="النسخة الرسمية الفاخرة لبيت الضيافة النوبي كاتو ويدي في غرب سهيل بأسوان - Where Peace Is. إقامة بين القباب النوبية وإطلالة النيل، جولات فلوكة خاصة، وأشهى المأكولات التراثية.">
+  <meta name="keywords" content="Kato Waidi, كاتو ويدي, بيت نوبي, غرب سهيل, أسوان, فنادق غرب سهيل, فلوكة النيل, Nubian House Aswan, Where Peace Is">
+  
+  <!-- Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS Variables & Cinematic Dual Themes
+       ========================================================================== */
+    :root {
+      /* Authentic Nubian Heritage Palette */
+      --nubian-gold: #f59e0b;
+      --nubian-gold-bright: #fbbf24;
+      --nubian-gold-glow: #ffd166;
+      --nubian-blue-royal: #0284c7;
+      --nubian-blue-deep: #0369a1;
+      --nubian-cyan: #00b4d8;
+      --terracotta-red: #e11d48;
+      --terracotta-orange: #ea580c;
+      --nubian-green: #10b981;
+      --nubian-green-deep: #047857;
+
+      /* Royal Dark Nubian Mode (Default VIP) */
+      --bg-base: #060e1a;
+      --bg-surface: #0a182c;
+      --bg-card: rgba(14, 29, 52, 0.75);
+      --bg-card-hover: rgba(20, 42, 74, 0.9);
+      --bg-glass: rgba(10, 24, 44, 0.88);
+      --bg-elevated: #112848;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --text-bright: #ffffff;
+      --border-accent: rgba(245, 158, 11, 0.35);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-card: rgba(56, 189, 248, 0.16);
+      --card-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65);
+      --gold-glow: 0 0 25px rgba(245, 158, 11, 0.32);
+      --nav-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+      --drawer-bg: #091526;
+      --input-bg: rgba(6, 14, 26, 0.8);
+      --tag-bg: rgba(245, 158, 11, 0.14);
+      --chat-host-bubble: #132a4a;
+      --chat-user-bubble: #0369a1;
+    }
+
+    [data-theme="light"] {
+      /* Sunny Nile Light Mode */
+      --bg-base: #faf7f2;
+      --bg-surface: #f3ece0;
+      --bg-card: rgba(255, 255, 255, 0.94);
+      --bg-card-hover: rgba(255, 255, 255, 0.98);
+      --bg-glass: rgba(250, 247, 242, 0.92);
+      --bg-elevated: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --text-bright: #020617;
+      --border-accent: rgba(217, 119, 6, 0.4);
+      --border-subtle: rgba(15, 23, 42, 0.1);
+      --border-card: rgba(3, 105, 161, 0.16);
+      --card-shadow: 0 16px 36px -8px rgba(3, 105, 161, 0.12);
+      --gold-glow: 0 0 20px rgba(217, 119, 6, 0.22);
+      --nav-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      --drawer-bg: #ffffff;
+      --input-bg: #ffffff;
+      --tag-bg: rgba(217, 119, 6, 0.12);
+      --chat-host-bubble: #e2e8f0;
+      --chat-user-bubble: #0284c7;
+    }
+
+    /* ==========================================================================
+       Reset & Base Rules
+       ========================================================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-primary);
+      line-height: 1.65;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    body[dir="ltr"] {
+      font-family: 'Outfit', 'Cairo', system-ui, sans-serif;
+    }
+
+    /* Ambient Nubian Pattern Background */
+    .ambient-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.035;
+      background-image: 
+        radial-gradient(var(--nubian-gold) 1.5px, transparent 1.5px),
+        radial-gradient(var(--nubian-cyan) 1.5px, transparent 1.5px);
+      background-size: 44px 44px;
+      background-position: 0 0, 22px 22px;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ==========================================================================
+       VIP Top Bar
+       ========================================================================== */
+    .vip-topbar {
+      background: linear-gradient(90deg, #091c33, #07172b, #112d52);
+      color: #f1f5f9;
+      font-size: 0.85rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+      position: relative;
+      z-index: 1002;
+    }
+
+    [data-theme="light"] .vip-topbar {
+      background: linear-gradient(90deg, #0369a1, #0284c7, #075985);
+      color: #ffffff;
+    }
+
+    .topbar-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .topbar-highlight {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+    }
+
+    .topbar-badge {
+      background: linear-gradient(135deg, var(--nubian-gold), var(--terracotta-orange));
+      color: #060e1a;
+      padding: 2px 10px;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .topbar-link {
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .topbar-link:hover {
+      color: var(--nubian-gold-bright);
+    }
+
+    /* ==========================================================================
+       Main Navbar & Authentic Logo
+       ========================================================================== */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: var(--nav-shadow);
+      transition: all 0.3s ease;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      gap: 20px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Authentic Kato Waidi Nubian Arch Logo */
+    .brand-logo-frame {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(0, 180, 216, 0.15));
+      border: 1.5px solid var(--border-accent);
+      box-shadow: var(--gold-glow);
+      padding: 2px;
+    }
+
+    .brand-titles h1 {
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: -0.3px;
+      line-height: 1.15;
+      color: var(--text-bright);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-titles h1 span {
+      color: var(--nubian-gold);
+    }
+
+    .brand-titles p {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      position: relative;
+      padding: 6px 2px;
+      transition: color 0.25s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--nubian-gold), var(--nubian-cyan));
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .nav-link:hover {
+      color: var(--nubian-gold);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .icon-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+
+    .icon-btn:hover {
+      border-color: var(--nubian-gold);
+      color: var(--nubian-gold);
+      transform: translateY(-1px);
+    }
+
+    .cart-btn-trigger {
+      background: linear-gradient(135deg, var(--nubian-gold), #d97706);
+      color: #060e1a;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      font-family: inherit;
+    }
+
+    .cart-btn-trigger:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 6px 22px rgba(245, 158, 11, 0.55);
+    }
+
+    .cart-badge {
+      background: #e11d48;
+      color: #ffffff;
+      border-radius: 99px;
+      padding: 2px 7px;
+      font-size: 0.78rem;
+      font-weight: 900;
+      min-width: 20px;
+      text-align: center;
+      border: 2px solid #ffffff;
+      line-height: 1;
+    }
+
+    /* ==========================================================================
+       Hero Section
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      padding: 70px 0 90px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-badge-vip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid var(--border-accent);
+      padding: 6px 16px;
+      border-radius: 99px;
+      color: var(--nubian-gold-bright);
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      box-shadow: var(--gold-glow);
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.18;
+      color: var(--text-bright);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, var(--nubian-gold-bright), #ea580c, var(--nubian-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 32px;
+      max-width: 620px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--nubian-gold), #ea580c);
+      color: #060e1a;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      font-family: inherit;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
+      color: #000000;
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--nubian-cyan);
+      color: var(--nubian-cyan);
+      transform: translateY(-2px);
+    }
+
+    .hero-features-chips {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .chip-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .chip-item svg {
+      color: var(--nubian-gold);
+    }
+
+    /* Hero Showcase Card */
+    .hero-visual-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 24px;
+      padding: 16px;
+      box-shadow: var(--card-shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-frame {
+      width: 100%;
+      height: 400px;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      background: #08284c;
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .hero-visual-card:hover .hero-image-frame img {
+      transform: scale(1.04);
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      bottom: 28px;
+      right: 28px;
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-accent);
+      padding: 12px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: floatBadge 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatBadge {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+
+    body[dir="ltr"] .hero-floating-badge {
+      right: auto;
+      left: 28px;
+    }
+
+    /* Nubian Chevron Wave Divider */
+    .nubian-frieze-divider {
+      width: 100%;
+      height: 24px;
+      margin: 40px 0 20px;
+      opacity: 0.95;
+    }
+
+    /* ==========================================================================
+       Interactive Lightbox Photo Gallery Section
+       ========================================================================== */
+    .gallery-section {
+      padding: 70px 0 90px;
+      position: relative;
+    }
+
+    .section-header-centered {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 36px;
+    }
+
+    .section-eyebrow {
+      color: var(--nubian-gold);
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .section-heading {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 900;
+      color: var(--text-bright);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .gallery-filter-chips {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .gallery-filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 8px 18px;
+      border-radius: 99px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+
+    .gallery-filter-btn:hover {
+      border-color: var(--nubian-gold);
+      color: var(--text-bright);
+    }
+
+    .gallery-filter-btn.active {
+      background: linear-gradient(135deg, var(--nubian-gold), var(--terracotta-orange));
+      color: #060e1a;
+      border-color: transparent;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+    }
+
+    /* Gallery Grid with Masonry Feel */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .gallery-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--nubian-gold);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .gallery-thumb-frame {
+      width: 100%;
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+      background: #0d1f36;
+    }
+
+    .gallery-thumb-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-card:hover .gallery-thumb-frame img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--bg-glass);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-accent);
+      color: var(--nubian-gold-bright);
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      z-index: 2;
+    }
+
+    body[dir="ltr"] .gallery-overlay-badge {
+      right: auto;
+      left: 14px;
+    }
+
+    .gallery-card-info {
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .gallery-card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-bright);
+    }
+
+    .gallery-card-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .gallery-zoom-icon {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 99px;
+      background: var(--bg-glass);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    body[dir="ltr"] .gallery-zoom-icon {
+      left: auto;
+      right: 14px;
+    }
+
+    .gallery-card:hover .gallery-zoom-icon {
+      opacity: 1;
+      transform: scale(1);
+      color: var(--nubian-gold);
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(3, 7, 18, 0.94);
+      backdrop-filter: blur(12px);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .lightbox-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox-content-box {
+      max-width: 960px;
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-accent);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      position: relative;
+      transform: scale(0.92);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .lightbox-modal.active .lightbox-content-box {
+      transform: scale(1);
+    }
+
+    .lightbox-main-img-frame {
+      width: 100%;
+      height: 520px;
+      max-height: 60vh;
+      background: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .lightbox-main-img-frame img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .lightbox-info-bar {
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .lightbox-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-bright);
+    }
+
+    .lightbox-counter {
+      color: var(--nubian-gold);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      width: 40px;
+      height: 40px;
+      border-radius: 99px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: background 0.2s;
+    }
+
+    .lightbox-close-btn:hover {
+      background: var(--terracotta-red);
+    }
+
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      width: 48px;
+      height: 48px;
+      border-radius: 99px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all 0.2s;
+    }
+
+    .lightbox-nav-btn:hover {
+      background: var(--nubian-gold);
+      color: #060e1a;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .lightbox-prev {
+      left: 16px;
+    }
+
+    .lightbox-next {
+      right: 16px;
+    }
+
+    /* ==========================================================================
+       Stay & Experience Calculator
+       ========================================================================== */
+    .calculator-section {
+      padding: 60px 0 80px;
+      position: relative;
+    }
+
+    .calc-card-glass {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: 24px;
+      padding: 36px 40px;
+      box-shadow: var(--card-shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .calc-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .calc-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .calc-label {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .calc-label-val {
+      color: var(--nubian-gold-bright);
+      font-weight: 800;
+    }
+
+    .calc-select {
+      width: 100%;
+      background: var(--input-bg);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      outline: none;
+      transition: border-color 0.25s ease;
+      font-family: inherit;
+    }
+
+    .calc-select:focus {
+      border-color: var(--nubian-gold);
+    }
+
+    .calc-slider {
+      width: 100%;
+      height: 8px;
+      border-radius: 99px;
+      background: var(--bg-surface);
+      outline: none;
+      accent-color: var(--nubian-gold);
+      cursor: pointer;
+    }
+
+    .calc-addons-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .addon-checkbox-label {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .addon-checkbox-label:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+    }
+
+    .addon-checkbox-label input {
+      accent-color: var(--nubian-gold);
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .calc-summary-box {
+      background: linear-gradient(135deg, rgba(14, 34, 62, 0.95), rgba(8, 20, 38, 0.95));
+      border: 1px solid var(--border-accent);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: var(--gold-glow);
+    }
+
+    [data-theme="light"] .calc-summary-box {
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      border: 1px solid rgba(217, 119, 6, 0.35);
+    }
+
+    .calc-price-title {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .calc-price-display {
+      font-size: clamp(2.4rem, 4.5vw, 3.2rem);
+      font-weight: 900;
+      color: var(--nubian-gold-bright);
+      line-height: 1;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .calc-breakdown-rows {
+      margin: 20px 0 24px;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 14px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.88rem;
+    }
+
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .breakdown-row span:last-child {
+      color: var(--text-bright);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       Catalog Section: Rooms, Tours & Dining
+       ========================================================================== */
+    .catalog-section {
+      padding: 70px 0 100px;
+    }
+
+    .filter-bar-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .filter-chips {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-width: none;
+    }
+
+    .filter-chips::-webkit-scrollbar {
+      display: none;
+    }
+
+    .filter-chip-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 9px 18px;
+      border-radius: 99px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+
+    .filter-chip-btn:hover {
+      color: var(--text-bright);
+      border-color: var(--nubian-gold);
+    }
+
+    .filter-chip-btn.active {
+      background: linear-gradient(135deg, var(--nubian-gold), var(--terracotta-orange));
+      color: #060e1a;
+      border-color: transparent;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--card-shadow);
+      transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--nubian-gold);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7);
+    }
+
+    .card-thumb-frame {
+      width: 100%;
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-surface);
+    }
+
+    .card-thumb-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .product-card:hover .card-thumb-frame img {
+      transform: scale(1.06);
+    }
+
+    .card-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-bright);
+      line-height: 1.3;
+    }
+
+    .card-price-badge {
+      background: var(--tag-bg);
+      border: 1px solid var(--border-accent);
+      color: var(--nubian-gold-bright);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .card-desc {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .card-footer-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .btn-add-cart {
+      flex: 1;
+      background: linear-gradient(135deg, var(--nubian-gold), #d97706);
+      color: #060e1a;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+
+    .btn-add-cart:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(245, 158, 11, 0.45);
+    }
+
+    /* ==========================================================================
+       Slide-out Smart Cart Drawer
+       ========================================================================== */
+    .cart-drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s ease;
+    }
+
+    .cart-drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: 480px;
+      background: var(--drawer-bg);
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.55);
+      z-index: 2001;
+      transform: translateX(-100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    body[dir="ltr"] .cart-drawer {
+      left: auto;
+      right: 0;
+      transform: translateX(100%);
+    }
+
+    .cart-drawer-overlay.active .cart-drawer {
+      transform: translateX(0);
+    }
+
+    .cart-drawer-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-surface);
+    }
+
+    .cart-header-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-bright);
+    }
+
+    .close-drawer-btn {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cart-drawer-body {
+      padding: 20px 24px;
+      overflow-y: auto;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cart-empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      margin: auto;
+    }
+
+    .cart-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .cart-item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .cart-item-thumb {
+      width: 58px;
+      height: 58px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--bg-surface);
+      flex-shrink: 0;
+    }
+
+    .cart-item-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cart-item-details {
+      flex-grow: 1;
+    }
+
+    .cart-item-name {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-bright);
+      margin-bottom: 3px;
+    }
+
+    .cart-item-price {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--nubian-gold-bright);
+    }
+
+    .cart-qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    .qty-btn {
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+
+    .cart-guest-form {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .guest-input {
+      width: 100%;
+      background: var(--input-bg);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .guest-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .cart-drawer-footer {
+      padding: 20px 24px;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .btn-checkout-whatsapp {
+      background: #25d366;
+      color: #ffffff;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      transition: all 0.25s ease;
+      font-family: inherit;
+      text-decoration: none;
+    }
+
+    .btn-checkout-whatsapp:hover {
+      background: #20ba59;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       Interactive Concierge AI Chat Widget
+       ========================================================================== */
+    .concierge-launcher {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      z-index: 1500;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    body[dir="ltr"] .concierge-launcher {
+      left: auto;
+      right: 28px;
+    }
+
+    .concierge-btn {
+      width: 62px;
+      height: 62px;
+      border-radius: 99px;
+      background: linear-gradient(135deg, var(--nubian-gold), var(--terracotta-orange));
+      color: #060e1a;
+      border: none;
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.5);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .concierge-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .concierge-ping {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      width: 16px;
+      height: 16px;
+      background: #10b981;
+      border-radius: 99px;
+      border: 3px solid var(--bg-base);
+    }
+
+    .concierge-tooltip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      color: var(--text-bright);
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      white-space: nowrap;
+    }
+
+    .concierge-window {
+      position: fixed;
+      bottom: 100px;
+      left: 28px;
+      width: 380px;
+      height: 520px;
+      max-height: calc(100vh - 120px);
+      background: var(--drawer-bg);
+      border: 1px solid var(--border-accent);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      z-index: 1501;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body[dir="ltr"] .concierge-window {
+      left: auto;
+      right: 28px;
+    }
+
+    .concierge-window.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: all;
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, #0e294b, #07172c);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+    }
+
+    .chat-body {
+      padding: 16px;
+      flex-grow: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .chat-message {
+      max-width: 82%;
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .chat-message.host {
+      background: var(--chat-host-bubble);
+      color: var(--text-primary);
+      align-self: flex-start;
+    }
+
+    .chat-message.user {
+      background: var(--chat-user-bubble);
+      color: #ffffff;
+      align-self: flex-end;
+    }
+
+    .chat-quick-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .quick-chip {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 6px 12px;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .quick-chip:hover {
+      border-color: var(--nubian-gold);
+      color: var(--nubian-gold);
+    }
+
+    .chat-footer {
+      padding: 12px 16px;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      gap: 8px;
+    }
+
+    .chat-input {
+      flex-grow: 1;
+      background: var(--input-bg);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 10px 14px;
+      border-radius: 99px;
+      font-size: 0.85rem;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .chat-send-btn {
+      background: var(--nubian-gold);
+      color: #060e1a;
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 99px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       Reviews & Amenities
+       ========================================================================== */
+    .showcase-section {
+      padding: 80px 0;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .rating-hero-banner {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: 20px;
+      padding: 28px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 48px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .score-badge-large {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #060e1a;
+      background: linear-gradient(135deg, var(--nubian-gold), var(--terracotta-orange));
+      padding: 8px 24px;
+      border-radius: 16px;
+      box-shadow: var(--gold-glow);
+      line-height: 1;
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .amenity-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.25s ease;
+    }
+
+    .amenity-card:hover {
+      border-color: var(--nubian-cyan);
+      transform: translateY(-2px);
+    }
+
+    .amenity-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--bg-surface);
+      color: var(--nubian-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* VIP Footer */
+    .vip-footer {
+      background: #040912;
+      border-top: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 70px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .toast-notice {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-accent);
+      color: var(--text-bright);
+      padding: 14px 22px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body[dir="rtl"] .toast-notice {
+      right: auto;
+      left: 30px;
+    }
+
+    .toast-notice.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .calc-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .catalog-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .calc-addons-list { grid-template-columns: 1fr; }
+      .concierge-window {
+        width: calc(100vw - 32px);
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 95px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Micro-Grid Background -->
+  <div class="ambient-grid"></div>
+
+  <!-- VIP Top Bar -->
+  <div class="vip-topbar">
+    <div class="container topbar-content">
+      <div class="topbar-highlight">
+        <span class="topbar-badge" data-key="topbar_badge">VIP OFFICIAL EDITION</span>
+        <span data-key="topbar_text">Kato Waidi Nubian House - Gharb Soheil, Aswan | Where Peace Is</span>
+      </div>
+      <div class="topbar-actions">
+        <a href="tel:+201222237078" class="topbar-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>+20 122 223 7078</span>
+        </a>
+        <a href="https://wa.me/201222237078" target="_blank" class="topbar-link" style="color: #25d366;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <span data-key="topbar_whatsapp">واتساب الحجز الفوري</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <header class="main-nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand-group">
+        <!-- Exact Authentic Kato Waidi Nubian Arch Logo (SVG) -->
+        <div class="brand-logo-frame">
+          <svg width="46" height="46" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Nubian Arch Outer Outline -->
+            <path d="M20 110V52C20 30 38 12 60 12C82 12 100 30 100 52V110H20Z" stroke="#00b4d8" stroke-width="4.5" fill="#06182c"/>
+            <!-- Inner Arch Gateway -->
+            <path d="M36 110V60C36 46 47 35 60 35C73 35 84 46 84 60V110" stroke="#f59e0b" stroke-width="4" stroke-dasharray="2 3"/>
+            
+            <!-- Authentic Nubian Chevron Triangle Band (Row 1) -->
+            <polygon points="26,38 34,26 42,38" fill="#e11d48"/>
+            <polygon points="42,38 50,26 58,38" fill="#fbbf24"/>
+            <polygon points="58,38 66,26 74,38" fill="#10b981"/>
+            <polygon points="74,38 82,26 90,38" fill="#0284c7"/>
+            <polygon points="90,38 98,26 106,38" fill="#ea580c"/>
+
+            <!-- Chevron Triangle Band (Row 2 Inverted) -->
+            <polygon points="34,26 42,38 50,26" fill="#00b4d8"/>
+            <polygon points="50,26 58,38 66,26" fill="#e11d48"/>
+            <polygon points="66,26 74,38 82,26" fill="#fbbf24"/>
+            <polygon points="82,26 90,38 98,26" fill="#10b981"/>
+
+            <!-- Central Traditional Doorway Frame (Yellow/Orange & Green) -->
+            <rect x="46" y="62" width="28" height="42" rx="4" fill="#fbbf24"/>
+            <path d="M52 104V74C52 69 68 69 68 74V104Z" fill="#047857"/>
+            <!-- Nubian Talisman Keyhole Motif -->
+            <circle cx="60" cy="80" r="3.5" fill="#fef08a"/>
+            <polygon points="58,82 62,82 63,90 57,90" fill="#fef08a"/>
+
+            <!-- Stylized Brand Crown -->
+            <polygon points="60,18 55,24 65,24" fill="#f59e0b"/>
+          </svg>
+        </div>
+        <div class="brand-titles">
+          <h1>KATO <span>WAIDI</span></h1>
+          <p data-key="brand_slogan">Where Peace Is | غرب سهيل - أسوان</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-links">
+        <li><a href="#gallery" class="nav-link" data-key="nav_gallery">معرض الصور الحقيقي</a></li>
+        <li><a href="#stay" class="nav-link" data-key="nav_rooms">الغرف والأجنحة</a></li>
+        <li><a href="#experiences" class="nav-link" data-key="nav_experiences">رحلات الفلوكة</a></li>
+        <li><a href="#dining" class="nav-link" data-key="nav_dining">المنيو النوبي</a></li>
+        <li><a href="#calculator" class="nav-link" data-key="nav_calc">حاسبة الإقامة</a></li>
+        <li><a href="#reviews" class="nav-link" data-key="nav_reviews">التقييمات</a></li>
+      </ul>
+
+      <!-- Controls: Lang, Theme, Cart -->
+      <div class="nav-controls">
+        <button id="langToggleBtn" class="icon-btn" title="تغيير اللغة / Switch Language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span id="langLabel">EN</span>
+        </button>
+
+        <button id="themeToggleBtn" class="icon-btn" title="تبديل الثيم / Switch Theme">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <button id="cartTriggerBtn" class="cart-btn-trigger">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span data-key="cart_btn">السلة</span>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text-block">
+        <div class="hero-badge-vip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span data-key="hero_vip_badge">بيت الضيافة النوبي الأول في غرب سهيل</span>
+        </div>
+        <h2 class="hero-title">
+          <span data-key="hero_title_1">حيث يكمن السلام..</span><br>
+          <span class="gradient-text" data-key="hero_title_2">كاتو ويدي غرب سهيل</span>
+        </h2>
+        <p class="hero-subtitle" data-key="hero_subtitle">
+          ملاذك الساحر على ضفاف النيل الخالد بأسوان، بين القباب النوبية الزرقاء والأبواب الملونة، حيث تلتقي أصالة السكن التراثي بكرم الضيافة الملكية ورحلات الفلوكة الخاصة.
+        </p>
+        <div class="hero-actions">
+          <a href="#stay" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span data-key="hero_cta_book">احجز إقامتك الملكية</span>
+          </a>
+          <a href="#gallery" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            <span data-key="hero_cta_gallery">استكشف معرض الصور</span>
+          </a>
+        </div>
+        <div class="hero-features-chips">
+          <div class="chip-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span data-key="hero_chip_1">إطلالة بانورامية على النيل</span>
+          </div>
+          <div class="chip-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span data-key="hero_chip_2">إفطار نوبي بلدي مجاني</span>
+          </div>
+          <div class="chip-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span data-key="hero_chip_3">تقييم استثنائي 9.8/10</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-visual-card">
+        <div class="hero-image-frame">
+          <img id="heroCoverImg" src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=80" alt="Kato Waidi Nubian House Nile View Aswan">
+        </div>
+        <div class="hero-floating-badge">
+          <div style="width:38px; height:38px; background:linear-gradient(135deg,var(--nubian-gold),var(--terracotta-orange)); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#060e1a;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:0.95rem; font-weight:800; color:var(--text-bright);">9.8 / 10 Exceptional</div>
+            <div style="font-size:0.78rem; color:var(--nubian-gold); font-weight:700;" data-key="badge_peace">Where Peace Is • غرب سهيل</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nubian Geometric Divider -->
+    <div class="container">
+      <svg class="nubian-frieze-divider" viewBox="0 0 1200 24" fill="none">
+        <pattern id="friezePat" width="40" height="24" patternUnits="userSpaceOnUse">
+          <polygon points="0,24 10,4 20,24" fill="#00b4d8"/>
+          <polygon points="10,4 20,24 30,4" fill="#ffb703"/>
+          <polygon points="20,24 30,4 40,24" fill="#e11d48"/>
+          <circle cx="20" cy="18" r="2.5" fill="#ffffff"/>
+        </pattern>
+        <rect width="1200" height="24" fill="url(#friezePat)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Interactive Lightbox Photo Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-eyebrow" data-key="gallery_eyebrow">معرض الصور الحقيقي</span>
+        <h3 class="section-heading" data-key="gallery_heading">جولة حية في أرجاء كاتو ويدي</h3>
+        <p class="section-desc" data-key="gallery_subheading">شاهد سحر العمارة النوبية الأصلية: القباب الزرقاء، الساحة الرملية، الغرف ذات السقف المقبب والشباك الأخضر المطل على النيل، وتمساح المناشف التراثي.</p>
+      </div>
+
+      <!-- Gallery Filter Chips -->
+      <div class="gallery-filter-chips">
+        <button class="gallery-filter-btn active" onclick="filterGallery('all', this)" data-key="gal_all">الكل (All Photos)</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('domes', this)" data-key="gal_domes">القباب والساحة النوبية</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('rooms', this)" data-key="gal_rooms">الغرف المقببة وسحر النيل</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('felucca', this)" data-key="gal_felucca">الفلوكة وجزر الشلال</button>
+        <button class="gallery-filter-btn" onclick="filterGallery('dining', this)" data-key="gal_dining">العشاء والسمر النوبي</button>
+      </div>
+
+      <!-- Gallery Cards Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Rendered by JS from GALLERY_IMAGES array -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Fullscreen Modal -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightboxOnBackdrop(event)">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" title="إغلاق المعرض">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <button class="lightbox-nav-btn lightbox-prev" onclick="prevLightboxSlide()" title="الصورة السابقة">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <button class="lightbox-nav-btn lightbox-next" onclick="nextLightboxSlide()" title="الصورة التالية">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+
+      <div class="lightbox-main-img-frame">
+        <img id="lightboxImg" src="" alt="Kato Waidi Photo Showcase">
+      </div>
+
+      <div class="lightbox-info-bar">
+        <div>
+          <div class="lightbox-title" id="lightboxTitle">عنوان الصورة</div>
+          <div style="font-size:0.85rem; color:var(--text-secondary);" id="lightboxDesc">وصف الصورة</div>
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter">1 / 8</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Stay Calculator Section -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-eyebrow" data-key="calc_eyebrow">حاسبة الإقامة الذكية</span>
+        <h3 class="section-heading" data-key="calc_heading">صمّم باقة إقامتك الملكية في كاتو ويدي</h3>
+        <p class="section-desc" data-key="calc_subheading">اختر الغرفة أو الجناح المفضل لديك، وحدد مدة الإقامة، والخدمات الإضافية لحساب التكلفة الفورية وحجزها بضغطة زر واحدة.</p>
+      </div>
+
+      <div class="calc-card-glass">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="calc-field-group">
+              <label class="calc-label" data-key="calc_lbl_room">نوع الغرفة أو الجناح النوبي:</label>
+              <select id="calcRoomSelect" class="calc-select" onchange="calculateStayCost()">
+                <option value="3800" data-name-ar="جناح النيل الملكي (إطلالة كاملة)" data-name-en="Royal Nile Suite (Full View)">جناح النيل الملكي (3,800 ج.م / ليلة)</option>
+                <option value="2900" data-name-ar="غرفة القبة النوبية التراثية" data-name-en="Nubian Dome Vault Room" selected>غرفة القبة النوبية التراثية (2,900 ج.م / ليلة)</option>
+                <option value="4600" data-name-ar="فيلا العائلة النوبية بإطلالة الغروب" data-name-en="Sunset Family Nubian Villa">فيلا العائلة بإطلالة الغروب (4,600 ج.م / ليلة)</option>
+                <option value="2400" data-name-ar="غرفة تراث غرب سهيل الفاخرة" data-name-en="Gharb Soheil Heritage Room">غرفة تراث غرب سهيل (2,400 ج.م / ليلة)</option>
+              </select>
+            </div>
+
+            <div class="calc-field-group">
+              <div class="calc-label">
+                <span data-key="calc_lbl_nights">مدة الإقامة:</span>
+                <span class="calc-label-val"><span id="nightsValDisplay">2</span> <span data-key="unit_nights">ليالي</span></span>
+              </div>
+              <input type="range" id="nightsSlider" class="calc-slider" min="1" max="14" value="2" oninput="updateNightsVal(this.value)">
+            </div>
+
+            <div class="calc-field-group">
+              <label class="calc-label" data-key="calc_lbl_guests">عدد النزلاء:</label>
+              <select id="guestsSelect" class="calc-select" onchange="calculateStayCost()">
+                <option value="1">نزيل واحد (1 Guest)</option>
+                <option value="2" selected>نزيلان (2 Guests)</option>
+                <option value="3">3 نزلاء (3 Guests)</option>
+                <option value="4">4 نزلاء (4 Guests - Family)</option>
+                <option value="6">عائلة كبيرة (5-6 Guests)</option>
+              </select>
+            </div>
+
+            <div class="calc-field-group">
+              <label class="calc-label" data-key="calc_lbl_addons">تجارب نوبية إضافية مميزة:</label>
+              <div class="calc-addons-list">
+                <label class="addon-checkbox-label">
+                  <input type="checkbox" id="addonFelucca" value="650" onchange="calculateStayCost()" checked>
+                  <span data-key="addon_felucca">رحلة فلوكة نيلية عند الغروب (+650 ج.م)</span>
+                </label>
+                <label class="addon-checkbox-label">
+                  <input type="checkbox" id="addonDinner" value="450" onchange="calculateStayCost()">
+                  <span data-key="addon_dinner">عشاء طواجن نوبية فاخر على النيل (+450 ج.م/فرد)</span>
+                </label>
+                <label class="addon-checkbox-label">
+                  <input type="checkbox" id="addonBoatTransfer" value="500" onchange="calculateStayCost()">
+                  <span data-key="addon_transfer">توصيل بالقارب الخاص من محطة/مطار (+500 ج.م)</span>
+                </label>
+                <label class="addon-checkbox-label">
+                  <input type="checkbox" id="addonOudNight" value="400" onchange="calculateStayCost()">
+                  <span data-key="addon_music">سهرة السمر والعزف على العود (+400 ج.م)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-summary-box">
+            <div class="calc-price-title" data-key="calc_sum_title">إجمالي الباقة التقديري</div>
+            <div class="calc-price-display">
+              <span id="calcTotalNumber">6,450</span>
+              <span style="font-size:1.15rem; color:var(--text-secondary);" id="calcCurrencyLabel">ج.م</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #10b981; font-weight: 700; margin-bottom: 12px;" data-key="calc_tax_included">شامل الإفطار النوبي الملكي والضريبة</div>
+
+            <div class="calc-breakdown-rows">
+              <div class="breakdown-row">
+                <span data-key="bd_room_cost">تكلفة الإقامة:</span>
+                <span id="bdRoomCost">5,800 ج.م</span>
+              </div>
+              <div class="breakdown-row">
+                <span data-key="bd_addons_cost">التجارب والخدمات:</span>
+                <span id="bdAddonsCost">650 ج.م</span>
+              </div>
+            </div>
+
+            <button class="btn-primary" style="width:100%; justify-content:center;" onclick="addCalculatedStayToCart()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+              <span data-key="calc_btn_add">إضافة الباقة إلى سلة الحجز</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section: Rooms, Tours, and Dining -->
+  <section class="catalog-section" id="stay">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-eyebrow" data-key="catalog_eyebrow">منظومة الحجز والمنيو المتكاملة</span>
+        <h3 class="section-heading" data-key="catalog_heading">اختر إقامتك ووجباتك وجولاتك النيلية</h3>
+        <p class="section-desc" data-key="catalog_subheading">تصفح الغرف التراثية المطلة على النيل، وجولات الفلوكة الخالدة، وأشهى المأكولات النوبية الطازجة. أضف ما تشاء إلى سلة الحجز بضغطة واحدة.</p>
+      </div>
+
+      <div class="filter-bar-wrapper">
+        <div class="filter-chips">
+          <button class="filter-chip-btn active" onclick="filterCatalog('all', this)" data-key="filter_all">الكل (All)</button>
+          <button class="filter-chip-btn" onclick="filterCatalog('rooms', this)" data-key="filter_rooms">غرف وأجنحة النيل</button>
+          <button class="filter-chip-btn" onclick="filterCatalog('experiences', this)" data-key="filter_experiences">رحلات الفلوكة والنيل</button>
+          <button class="filter-chip-btn" onclick="filterCatalog('tagines', this)" data-key="filter_tagines">طواجن وأكلات نوبية</button>
+          <button class="filter-chip-btn" onclick="filterCatalog('breakfast', this)" data-key="filter_breakfast">إفطار ومخبوزات</button>
+          <button class="filter-chip-btn" onclick="filterCatalog('drinks', this)" data-key="filter_drinks">مشروبات وأعشاب طبيعية</button>
+        </div>
+      </div>
+
+      <div class="catalog-grid" id="catalogCardsGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews & Amenities Showcase -->
+  <section class="showcase-section" id="reviews">
+    <div class="container">
+      <div class="rating-hero-banner">
+        <div style="display:flex; align-items:center; gap:20px;">
+          <div class="score-badge-large">9.8</div>
+          <div>
+            <h3 style="font-size:1.45rem; font-weight:900; color:var(--text-bright);" data-key="rating_exceptional">استثنائي • Exceptional</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary);" data-key="rating_based_on">بناءً على أكثر من 850 تقييم موثق لضيوف وزوار بيت كاتو ويدي</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:24px; flex-wrap:wrap;">
+          <div><span style="font-size:0.85rem; color:var(--text-secondary); font-weight:700;" data-key="metric_view">إطلالة النيل والهدوء:</span> <strong style="color:var(--nubian-gold);">9.9</strong></div>
+          <div><span style="font-size:0.85rem; color:var(--text-secondary); font-weight:700;" data-key="metric_staff">كرم الضيافة والخدمة:</span> <strong style="color:var(--nubian-gold);">10.0</strong></div>
+          <div><span style="font-size:0.85rem; color:var(--text-secondary); font-weight:700;" data-key="metric_clean">النظافة والراحة:</span> <strong style="color:var(--nubian-gold);">9.8</strong></div>
+          <div><span style="font-size:0.85rem; color:var(--text-secondary); font-weight:700;" data-key="metric_food">جودة الطعام النوبي:</span> <strong style="color:var(--nubian-gold);">9.9</strong></div>
+        </div>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div>
+            <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-bright);" data-key="am_1_title">تراس بانورامي نيلى</h4>
+            <p style="font-size:0.78rem; color:var(--text-secondary);" data-key="am_1_sub">مقاعد استرخاء مباشرة على مجرى النيل</p>
+          </div>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+          </div>
+          <div>
+            <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-bright);" data-key="am_2_title">مرسى فلوكة خاص</h4>
+            <p style="font-size:0.78rem; color:var(--text-secondary);" data-key="am_2_sub">انطلاق الرحلات النيلية من عتبة البيت</p>
+          </div>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+          </div>
+          <div>
+            <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-bright);" data-key="am_3_title">واي فاي عالي السرعة</h4>
+            <p style="font-size:0.78rem; color:var(--text-secondary);" data-key="am_3_sub">تغطية إنترنت سريعة لكافة الغرف والتراسات</p>
+          </div>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+          </div>
+          <div>
+            <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-bright);" data-key="am_4_title">خدمة غرف وكونسيرج 24/7</h4>
+            <p style="font-size:0.78rem; color:var(--text-secondary);" data-key="am_4_sub">طاقم ضيافة نوبي لتلبية كافة متطلباتكم</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide-out Smart Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-drawer-header">
+        <div class="cart-header-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span data-key="cart_drawer_title">سلة الحجز والطلبات النوبية</span>
+        </div>
+        <button class="close-drawer-btn" id="closeDrawerBtn" title="إغلاق السلة">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="cart-drawer-body">
+        <div id="cartItemsList" class="cart-items-list">
+          <!-- Rendered by JS -->
+        </div>
+
+        <div id="cartEmptyState" class="cart-empty-state">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <h3 data-key="cart_empty_title" style="margin-top:10px;">سلة الحجز فارغة حالياً</h3>
+          <p data-key="cart_empty_sub" style="font-size:0.88rem; color:var(--text-secondary); margin-top:4px;">أضف غرفتك، رحلة الفلوكة، أو وجباتك المفضلة من المنيو لتأكيد الحجز فوراً.</p>
+        </div>
+
+        <div class="cart-guest-form" id="cartGuestForm">
+          <div style="font-size:0.95rem; font-weight:800; color:var(--text-bright); display:flex; align-items:center; gap:6px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span data-key="guest_form_title">بيانات الضيف للتأكيد الرسمي:</span>
+          </div>
+          <input type="text" id="guestNameInput" class="guest-input" placeholder="اسم الضيف الكريم (Guest Full Name) *" required>
+          <div class="guest-row-2">
+            <input type="date" id="guestDateInput" class="guest-input" title="تاريخ الوصول أو الخدمة">
+            <select id="guestCountSelect" class="guest-input">
+              <option value="1">فرد واحد (1)</option>
+              <option value="2" selected>فردان (2)</option>
+              <option value="3">3 أفراد</option>
+              <option value="4">4 أفراد</option>
+              <option value="5+">5 أفراد فأكثر</option>
+            </select>
+          </div>
+          <input type="text" id="guestRoomTableInput" class="guest-input" placeholder="رقم الغرفة / الطاولة / حجز خارجي">
+          <textarea id="guestNotesInput" class="guest-input" rows="2" placeholder="ملاحظات خاصة (تفضيلات الأكل، ساعة الوصول، الخ)..."></textarea>
+        </div>
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:1.05rem; font-weight:700;" data-key="cart_total_label">الإجمالي النهائي:</span>
+          <span style="font-size:1.6rem; font-weight:900; color:var(--nubian-gold-bright);"><span id="cartGrandTotalVal">0</span> <span id="cartCurrencyBadge" style="font-size:1.1rem; color:var(--text-secondary);">ج.م</span></span>
+        </div>
+
+        <button class="btn-checkout-whatsapp" onclick="checkoutViaWhatsApp()">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <span data-key="cart_btn_checkout">إرسال الفاتورة الرسمية لواتساب الإدارة</span>
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Interactive Concierge AI Chat Widget -->
+  <div class="concierge-launcher">
+    <div class="concierge-tooltip" onclick="toggleConciergeChat()" data-key="chat_tooltip">
+      <span>مساعد كاتو ويدي النوبي</span>
+      <span style="color:var(--nubian-gold);">• أهلاً بك!</span>
+    </div>
+    <button class="concierge-btn" onclick="toggleConciergeChat()" title="تحدث مع المساعد النوبي">
+      <div class="concierge-ping"></div>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </button>
+  </div>
+
+  <!-- Chat Window -->
+  <div class="concierge-window" id="conciergeWindow">
+    <div class="chat-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div style="width:38px; height:38px; border-radius:99px; background:linear-gradient(135deg,var(--nubian-gold),var(--terracotta-orange)); display:flex; align-items:center; justify-content:center; color:#060e1a;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <div>
+          <div style="font-size:0.95rem; font-weight:800;" data-key="chat_host_title">المساعد النوبي الذكي</div>
+          <div style="font-size:0.75rem; color:#4ade80;">● <span data-key="chat_status_online">متصل الآن لمساعدتك</span></div>
+        </div>
+      </div>
+      <button class="close-drawer-btn" style="color:#ffffff;" onclick="toggleConciergeChat()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="chat-body" id="chatMessagesBody">
+      <div class="chat-message host" data-key="chat_welcome_msg">
+        أهلاً ومرحباً بك في كاتو ويدي! أنا رفيقك النوبي للإجابة عن استفساراتك حول الإقامة، النيل، وطريقة الوصول في غرب سهيل. كيف يمكنني خدمتك اليوم؟
+      </div>
+
+      <div class="chat-quick-chips">
+        <button class="quick-chip" onclick="handleQuickChat('location')" data-key="chip_loc">📍 طريقة الوصول لغرب سهيل</button>
+        <button class="quick-chip" onclick="handleQuickChat('felucca')" data-key="chip_felucca">⛵ مواعيد رحلات الفلوكة</button>
+        <button class="quick-chip" onclick="handleQuickChat('dining')" data-key="chip_dining">🍲 مواعيد الإفطار والعشاء</button>
+        <button class="quick-chip" onclick="handleQuickChat('whatsapp')" data-key="chip_direct_wa">📲 تحدث مع المضيف واتساب</button>
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <input type="text" id="chatInputText" class="chat-input" placeholder="اكتب سؤالك هنا..." onkeydown="if(event.key==='Enter') sendChatMessage()">
+      <button class="chat-send-btn" onclick="sendChatMessage()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- VIP Footer -->
+  <footer class="vip-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2 style="font-size:1.35rem; color:#fff; font-weight:900;">KATO <span style="color:var(--nubian-gold);">WAIDI</span></h2>
+        <p style="color:var(--nubian-gold-bright); font-size:0.8rem; font-weight:800; letter-spacing:1px; margin-bottom:12px;">WHERE PEACE IS • غرب سهيل بأسوان</p>
+        <p style="font-size:0.9rem; line-height:1.7;" data-key="footer_about">
+          النسخة الرسمية الفاخرة لبيت الضيافة النوبي كاتو ويدي. تجربة عيش متكاملة تجمع بين سحر النيل، هدوء غرب سهيل، وأصالة الكرم النوبي.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="font-size:1.05rem; font-weight:800; color:#fff; margin-bottom:14px;" data-key="footer_quick_links">روابط سريعة</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:0.9rem;">
+          <li><a href="#gallery" style="color:inherit; text-decoration:none;" data-key="nav_gallery">معرض الصور الحقيقي</a></li>
+          <li><a href="#stay" style="color:inherit; text-decoration:none;" data-key="nav_rooms">الغرف والأجنحة</a></li>
+          <li><a href="#experiences" style="color:inherit; text-decoration:none;" data-key="nav_experiences">رحلات الفلوكة</a></li>
+          <li><a href="#calculator" style="color:inherit; text-decoration:none;" data-key="nav_calc">حاسبة الإقامة</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-size:1.05rem; font-weight:800; color:#fff; margin-bottom:14px;" data-key="footer_contacts">التواصل المباشر</h4>
+        <p style="font-size:0.88rem; margin-bottom:8px;" data-key="footer_address">غرب سهيل، أسوان، جمهورية مصر العربية</p>
+        <p style="font-size:0.9rem; font-weight:700; color:#fff; margin-bottom:8px;">+20 122 223 7078</p>
+        <a href="https://wa.me/201222237078" target="_blank" style="color:#25d366; font-weight:700; text-decoration:none;">WhatsApp VIP Support</a>
+      </div>
+
+      <div>
+        <h4 style="font-size:1.05rem; font-weight:800; color:#fff; margin-bottom:14px;" data-key="footer_guarantee">ضمان كاتو ويدي</h4>
+        <p style="font-size:0.88rem; line-height:1.6; margin-bottom:12px;" data-key="footer_guar_text">
+          أفضل سعر إقامة مضمون عند الحجز المباشر عبر الموقع أو الواتساب، مع مشروب ترحيبي نوبي مجاني عند الوصول.
+        </p>
+        <a href="https://wa.me/201222237078" target="_blank" class="btn-primary" style="padding:10px 18px; font-size:0.85rem;">حجز فوري VIP</a>
+      </div>
+    </div>
+
+    <div class="container" style="border-top:1px solid rgba(255,255,255,0.08); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; font-size:0.85rem;">
+      <div>© 2026 Kato Waidi Nubian House. All Rights Reserved. (Where Peace Is)</div>
+      <div data-key="footer_crafted">تم التطوير بأعلى معايير الفخامة والواجهات الذكية - غرب سهيل، أسوان</div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="appToast">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMessage">تمت الإضافة بنجاح!</span>
+  </div>
+
+  <!-- ==========================================================================
+       JavaScript Architecture & Configurable Image Array
+       ========================================================================== */ -->
+  <script>
+    /* ==========================================================================
+       1. CONFIGURABLE IMAGE REPOSITORY (Edit & Update Anytime)
+       Real Aswan & Nubian Hospitality High-Resolution Unsplash Showcase
+       ========================================================================== */
+    const GALLERY_IMAGES = [
+      {
+        id: "gal_1",
+        category: "domes",
+        title_ar: "إطلالة القباب الزرقاء على النيل وقت الغروب",
+        title_en: "Blue Nubian Domes Overlooking Nile Sunset",
+        desc_ar: "الواجهة الشهيرة لبيت كاتو ويدي مع القباب الزرقاء وسحر هدوء مجرى النيل.",
+        desc_en: "Iconic facade of Kato Waidi featuring cobalt domes and tranquil Nile waters.",
+        badge_ar: "القباب النوبية",
+        badge_en: "Nubian Domes",
+        url: "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "gal_2",
+        category: "rooms",
+        title_ar: "الغرفة المقببة وسرير التمساح والورد والشباك المقوس",
+        title_en: "Vaulted Brick Suite with Bed Floral Crocodile & Nile View",
+        desc_ar: "سقف القبو المبني من الطوب الأحمر، مع شباك أخضر مقوس يطل على النيل وتمساح المناشف التراثي المزين بزهور الجهنمية.",
+        desc_en: "Traditional exposed red-brick vaulted dome with green arched window viewing the Nile and folded towel crocodile.",
+        badge_ar: "جناح النيل الملكي",
+        badge_en: "Royal Suite",
+        url: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "gal_3",
+        category: "domes",
+        title_ar: "الساحة الرملية والمظلات وجلسات الاسترخاء النوبية",
+        title_en: "Sandy Courtyard & Traditional Sun Lounges",
+        desc_ar: "فناء البيت الداخلي بساحته الرملية ومظلات الخوص التراثية للاسترخاء تحت شمس أسوان الدافئة.",
+        desc_en: "Inner sandy courtyard with palm-thatch umbrellas and colorful sun-loungers.",
+        badge_ar: "الساحة الرملية",
+        badge_en: "Sand Courtyard",
+        url: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "gal_4",
+        category: "domes",
+        title_ar: "الأبواب الصفراء والخضراء والسلالم المزخرفة بالمثلثات",
+        title_en: "Vibrant Yellow Doors & Geometric Nubian Stairways",
+        desc_ar: "تناغم الألوان النوبية البهيجة بين الأبواب الخشبية والجدران المزدانة بالمثلثات الهندسية.",
+        desc_en: "Striking yellow and green arched portals framed with traditional triangle frescoes.",
+        badge_ar: "العمارة النوبية",
+        badge_en: "Architecture",
+        url: "https://images.unsplash.com/photo-1578925518470-4def7a0f08bb?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "gal_5",
+        category: "felucca",
+        title_ar: "رحلة الفلوكة الشراعية بين جزر الشلال الأول وأسوان",
+        title_en: "Felucca Sailing across First Cataract Islands",
+        desc_ar: "إبحار هادئ بشراع أبيض عتيق في أحضان النيل وقت الغروب الذهبي مع الكركديه الأسواني.",
+        desc_en: "Serene white-sail voyage along the granite cataract islands during golden hour.",
+        badge_ar: "رحلات الفلوكة",
+        badge_en: "Felucca Sail",
+        url: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "gal_6",
+        category: "dining",
+        title_ar: "طواجن الفخار النوبية والمأكولات التراثية على النيل",
+        title_en: "Authentic Nubian Clay Pot Tagines by the River",
+        desc_ar: "طاجن البامية باللحم الضاني البلدي والسمك النيلي الطازج المطهو في فخار أسوان.",
+        desc_en: "Rich okra lamb stew and fresh Nile catch slow-cooked in traditional earthenware.",
+        badge_ar: "المنيو النوبي",
+        badge_en: "Nubian Cuisine",
+        url: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "gal_7",
+        category: "dining",
+        title_ar: "سهرة السمر النوبي والعزف على العود حول نار المخيم",
+        title_en: "Campfire Nubian Folk Music & Live Oud Gathering",
+        desc_ar: "ليالي السمر الشاعرية حول نار المخيم مع أنغام العود والدفوف النوبية تحت نجوم سماء غرب سهيل.",
+        desc_en: "Atmospheric evening gathering around the campfire with acoustic oud melodies and drums.",
+        badge_ar: "ليالي السمر",
+        badge_en: "Oud Nights",
+        url: "https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        id: "gal_8",
+        category: "felucca",
+        title_ar: "معبد فيلة وجزيرة أجيليكا باللانش النهري الخاص",
+        title_en: "Philae Temple & Agilkia Island Motorboat Excursion",
+        desc_ar: "زيارة نيلية خاصة لمعبد إيزيس الساحر في فيلة تنطلق مباشرة من مرسى كاتو ويدي.",
+        desc_en: "Scenic riverboat excursion to the sacred temple of Isis departing directly from our dock.",
+        badge_ar: "تراث أسوان",
+        badge_en: "Philae Temple",
+        url: "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=1200&q=80"
+      }
+    ];
+
+    /* ==========================================================================
+       2. Catalog Products (Rooms, Felucca, Tagines, Breakfast, Drinks)
+       ========================================================================== */
+    const catalogData = [
+      {
+        id: "room_royal_suite",
+        category: "rooms",
+        name_ar: "جناح النيل الملكي مع شباك مقوس وتراس خاص",
+        name_en: "Royal Nile Suite with Arched Window & Terrace",
+        price: 3800,
+        unit_type: "night",
+        desc_ar: "جناح فسيح بسقف قبو من الطوب الأحمر وشباك أخضر مقوس يطل على النيل، سرير كينج مع تمساح المناشف التراثي والزهور.",
+        desc_en: "Spacious master suite featuring red-brick vaulted ceiling, green arched river window, king bed, and folded towel crocodile.",
+        img: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "room_dome_vault",
+        category: "rooms",
+        name_ar: "غرفة القبة النوبية التراثية المطلة على الساحة",
+        name_en: "Nubian Vault Dome Room Facing Courtyard",
+        price: 2900,
+        unit_type: "night",
+        desc_ar: "عمارة نوبية أصيلة توفر عزلاً حرارياً طبيعياً، مزدانة بالزخارف الهندسية والأبواب الصفراء والخضراء.",
+        desc_en: "Authentic mud-brick vaulted architecture ensuring natural cooling, decorated with geometric murals and vibrant doorways.",
+        img: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "room_family_villa",
+        category: "rooms",
+        name_ar: "فيلا العائلة بإطلالة الغروب والسطح النوبي",
+        name_en: "Sunset Family Villa with Nubian Stargazing Roof",
+        price: 4600,
+        unit_type: "night",
+        desc_ar: "فيلا متكاملة تتسع حتى 6 أفراد، غرفتا نوم وصالة وسطح خاص لمراقبة النجوم والغروب على النيل.",
+        desc_en: "Spacious family villa accommodating up to 6 guests with 2 bedrooms, heritage living salon, and private stargazing rooftop.",
+        img: "https://images.unsplash.com/photo-1578925518470-4def7a0f08bb?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "tour_sunset_felucca",
+        category: "experiences",
+        name_ar: "رحلة الفلوكة النيلية الخاصة عند الغروب",
+        name_en: "Private Sunset Nile Felucca Sailing",
+        price: 650,
+        unit_type: "person",
+        desc_ar: "إبحار شاعري لمدة ساعتين حول جزر الشلال الأول مع احتساء الكركديه الأسواني والموسيقى النوبية الهادئة.",
+        desc_en: "Romantic 2-hour sailing around the First Cataract islands aboard an authentic wooden felucca with hot Aswan hibiscus.",
+        img: "https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "tour_philae_temple",
+        category: "experiences",
+        name_ar: "جولة معبد فيلة وجزيرة أجيليكا باللانش الخاص",
+        name_en: "Philae Temple & Agilkia Island Motorboat Tour",
+        price: 950,
+        unit_type: "person",
+        desc_ar: "رحلة نهرية بمركب سريع خاص لزيارة معبد إيزيس الساحر في فيلة مع مرشد نوبي محلي.",
+        desc_en: "Private motorboat scenic ride to the breathtaking temple of Isis on Agilkia Island with local host.",
+        img: "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "food_lamb_okra_tagine",
+        category: "tagines",
+        name_ar: "طاجن بامية نوبية باللحم الضاني البلدي في الفخار",
+        name_en: "Nubian Lamb Okra Tagine in Clay Pot",
+        price: 340,
+        unit_type: "dish",
+        desc_ar: "بامية صعيدية طازجة مطهوة في طاجن فخار مع لحم ضاني متبل بالثوم والكزبرة والعيش الشمسي.",
+        desc_en: "Fresh baby okra slow-stewed in clay pot with tender local lamb, garlic, and Aswan coriander, served with sun bread.",
+        img: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "food_mixed_grills",
+        category: "tagines",
+        name_ar: "مشاوي مشكلة نوبية على الفحم مع مقبلات غرب سهيل",
+        name_en: "Charcoal Nubian Mixed Grills with Local Dips",
+        price: 390,
+        unit_type: "dish",
+        desc_ar: "كباب وكفتة لحم بلدي وشيش طاووق بتتبيلة أسوانية مشوي على الفحم الحي مع الطحينة والسلطات.",
+        desc_en: "Prime charcoal grilled lamb kebabs, kofta, and chicken skewers served with charred peppers and sesame tahini.",
+        img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "bk_royal_breakfast",
+        category: "breakfast",
+        name_ar: "إفطار كاتو ويدي الملكي الشامل",
+        name_en: "Kato Waidi Royal Nubian Breakfast Feast",
+        price: 220,
+        unit_type: "dish",
+        desc_ar: "فطير مشلتت مورق، عسل نحل جبلي، عسل أسود بالطحينة، جبن قديم بالمش، بيض بلدي، وفول مدمس بالسمن البلدي.",
+        desc_en: "Grand breakfast tray: buttery flaky fiteer pastry, mountain sidr honey, black molasses, aged mesh cheese, farm eggs, & foul.",
+        img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "dr_aswan_karkadeh",
+        category: "drinks",
+        name_ar: "كركديه أسواني مثلج طبيعي 100% أورجانيك",
+        name_en: "Aswan Iced Hibiscus (Organic Karkadeh)",
+        price: 65,
+        unit_type: "drink",
+        desc_ar: "مستخلص زهور الكركديه الأسوانية المجففة تحت شمس الصعيد، يُقدم مثلجاً مع أوراق النعناع الفواح.",
+        desc_en: "Chilled infusion of handpicked deep-ruby Aswan hibiscus petals over crushed ice with fresh garden mint leaves.",
+        img: "https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=800&q=80"
+      }
+    ];
+
+    /* ==========================================================================
+       3. State & Bilingual Dictionaries
+       ========================================================================== */
+    const IS_DEMO_MODE = false;
+    const TARGET_WHATSAPP = "201222237078";
+    let currentLang = 'ar';
+    let currentTheme = 'dark';
+    let currentGalleryCategory = 'all';
+    let currentCatalogCategory = 'all';
+    let activeLightboxIndex = 0;
+    let filteredGalleryItems = [...GALLERY_IMAGES];
+    let cart = {};
+
+    const i18n = {
+      ar: {
+        topbar_badge: "نسخة إنتاج رسمية VIP",
+        topbar_text: "بيت الضيافة النوبي كاتو ويدي - غرب سهيل، أسوان | Where Peace Is",
+        topbar_whatsapp: "واتساب الحجز الفوري",
+        brand_slogan: "حيث يكمن السلام | غرب سهيل - أسوان",
+        nav_gallery: "معرض الصور الحقيقي",
+        nav_rooms: "الغرف والأجنحة",
+        nav_experiences: "رحلات الفلوكة",
+        nav_dining: "المنيو النوبي",
+        nav_calc: "حاسبة الإقامة",
+        nav_reviews: "التقييمات",
+        cart_btn: "سلة الحجز",
+        hero_vip_badge: "بيت الضيافة النوبي الأول في غرب سهيل",
+        hero_title_1: "حيث يكمن السلام..",
+        hero_title_2: "كاتو ويدي غرب سهيل",
+        hero_subtitle: "ملاذك الساحر على ضفاف النيل الخالد بأسوان، بين القباب النوبية الزرقاء والأبواب الملونة، حيث تلتقي أصالة السكن التراثي بكرم الضيافة الملكية ورحلات الفلوكة الخاصة.",
+        hero_cta_book: "احجز إقامتك الملكية",
+        hero_cta_gallery: "استكشف معرض الصور",
+        hero_chip_1: "إطلالة بانورامية على النيل",
+        hero_chip_2: "إفطار نوبي بلدي مجاني",
+        hero_chip_3: "تقييم استثنائي 9.8/10",
+        badge_peace: "حيث يكمن السلام • غرب سهيل",
+        gallery_eyebrow: "معرض الصور الحقيقي",
+        gallery_heading: "جولة حية في أرجاء كاتو ويدي",
+        gallery_subheading: "شاهد سحر العمارة النوبية الأصلية: القباب الزرقاء، الساحة الرملية، الغرف ذات السقف المقبب والشباك الأخضر المطل على النيل، وتمساح المناشف التراثي.",
+        gal_all: "الكل (All Photos)",
+        gal_domes: "القباب والساحة النوبية",
+        gal_rooms: "الغرف المقببة وسحر النيل",
+        gal_felucca: "الفلوكة وجزر الشلال",
+        gal_dining: "العشاء والسمر النوبي",
+        calc_eyebrow: "حاسبة الإقامة الذكية",
+        calc_heading: "صمّم باقة إقامتك الملكية في كاتو ويدي",
+        calc_subheading: "اختر الغرفة أو الجناح المفضل لديك، وحدد مدة الإقامة، والخدمات الإضافية لحساب التكلفة الفورية وحجزها بضغطة زر واحدة.",
+        calc_lbl_room: "نوع الغرفة أو الجناح النوبي:",
+        calc_lbl_nights: "مدة الإقامة:",
+        unit_nights: "ليالي",
+        calc_lbl_guests: "عدد النزلاء:",
+        calc_lbl_addons: "تجارب نوبية إضافية مميزة:",
+        addon_felucca: "رحلة فلوكة نيلية عند الغروب (+650 ج.م)",
+        addon_dinner: "عشاء طواجن نوبية فاخر على النيل (+450 ج.م/فرد)",
+        addon_transfer: "توصيل بالقارب الخاص من محطة/مطار (+500 ج.م)",
+        addon_music: "سهرة السمر والعزف على العود (+400 ج.م)",
+        calc_sum_title: "إجمالي الباقة التقديري",
+        calc_tax_included: "شامل الإفطار النوبي الملكي والضريبة",
+        bd_room_cost: "تكلفة الإقامة:",
+        bd_addons_cost: "التجارب والخدمات:",
+        calc_btn_add: "إضافة الباقة إلى سلة الحجز",
+        catalog_eyebrow: "منظومة الحجز والمنيو المتكاملة",
+        catalog_heading: "اختر إقامتك ووجباتك وجولاتك النيلية",
+        catalog_subheading: "تصفح الغرف التراثية المطلة على النيل، وجولات الفلوكة الخالدة، وأشهى المأكولات النوبية الطازجة. أضف ما تشاء إلى سلة الحجز بضغطة واحدة.",
+        filter_all: "الكل (All)",
+        filter_rooms: "غرف وأجنحة النيل",
+        filter_experiences: "رحلات الفلوكة والنيل",
+        filter_tagines: "طواجن وأكلات نوبية",
+        filter_breakfast: "إفطار ومخبوزات",
+        filter_drinks: "مشروبات وأعشاب طبيعية",
+        rating_exceptional: "استثنائي • Exceptional",
+        rating_based_on: "بناءً على أكثر من 850 تقييم موثق لضيوف وزوار بيت كاتو ويدي",
+        metric_view: "إطلالة النيل والهدوء:",
+        metric_staff: "كرم الضيافة والخدمة:",
+        metric_clean: "النظافة والراحة:",
+        metric_food: "جودة الطعام النوبي:",
+        am_1_title: "تراس بانورامي نيلى",
+        am_1_sub: "مقاعد استرخاء مباشرة على مجرى النيل",
+        am_2_title: "مرسى فلوكة خاص",
+        am_2_sub: "انطلاق الرحلات النيلية من عتبة البيت",
+        am_3_title: "واي فاي عالي السرعة",
+        am_3_sub: "تغطية إنترنت سريعة لكافة الغرف والتراسات",
+        am_4_title: "خدمة غرف وكونسيرج 24/7",
+        am_4_sub: "طاقم ضيافة نوبي لتلبية كافة متطلباتكم",
+        cart_drawer_title: "سلة الحجز والطلبات النوبية",
+        cart_empty_title: "سلة الحجز فارغة حالياً",
+        cart_empty_sub: "أضف غرفتك، رحلة الفلوكة، أو وجباتك المفضلة من المنيو لتأكيد الحجز فوراً.",
+        guest_form_title: "بيانات الضيف للتأكيد الرسمي:",
+        cart_total_label: "الإجمالي النهائي:",
+        cart_btn_checkout: "إرسال الفاتورة الرسمية لواتساب الإدارة",
+        chat_tooltip: "مساعد كاتو ويدي النوبي",
+        chat_host_title: "المساعد النوبي الذكي",
+        chat_status_online: "متصل الآن لمساعدتك",
+        chat_welcome_msg: "أهلاً ومرحباً بك في كاتو ويدي! أنا رفيقك النوبي للإجابة عن استفساراتك حول الإقامة، النيل، وطريقة الوصول في غرب سهيل. كيف يمكنني خدمتك اليوم؟",
+        chip_loc: "📍 طريقة الوصول لغرب سهيل",
+        chip_felucca: "⛵ مواعيد رحلات الفلوكة",
+        chip_dining: "🍲 مواعيد الإفطار والعشاء",
+        chip_direct_wa: "📲 تحدث مع المضيف واتساب",
+        footer_about: "النسخة الرسمية الفاخرة لبيت الضيافة النوبي كاتو ويدي. تجربة عيش متكاملة تجمع بين سحر النيل، هدوء غرب سهيل، وأصالة الكرم النوبي.",
+        footer_quick_links: "روابط سريعة",
+        footer_contacts: "التواصل المباشر",
+        footer_address: "غرب سهيل، أسوان، جمهورية مصر العربية",
+        footer_guarantee: "ضمان كاتو ويدي",
+        footer_guar_text: "أفضل سعر إقامة مضمون عند الحجز المباشر عبر الموقع أو الواتساب، مع مشروب ترحيبي نوبي مجاني عند الوصول.",
+        footer_crafted: "تم التطوير بأعلى معايير الفخامة والواجهات الذكية - غرب سهيل، أسوان",
+        add_btn: "أضف للحجز",
+        currency: "ج.م"
+      },
+      en: {
+        topbar_badge: "VIP OFFICIAL EDITION",
+        topbar_text: "Kato Waidi Nubian House - Gharb Soheil, Aswan | Where Peace Is",
+        topbar_whatsapp: "Direct WhatsApp Booking",
+        brand_slogan: "Where Peace Is | Gharb Soheil, Aswan",
+        nav_gallery: "Real Photo Gallery",
+        nav_rooms: "Rooms & Suites",
+        nav_experiences: "Felucca Tours",
+        nav_dining: "Nubian Menu",
+        nav_calc: "Stay Calculator",
+        nav_reviews: "Reviews",
+        cart_btn: "Booking Cart",
+        hero_vip_badge: "Premier Nubian Guest House in Gharb Soheil",
+        hero_title_1: "Where Peace Is..",
+        hero_title_2: "Kato Waidi Gharb Soheil",
+        hero_subtitle: "Your peaceful sanctuary on the banks of the timeless Nile in Aswan, amidst cobalt domes and colorful portals where heritage hospitality meets private felucca sailing.",
+        hero_cta_book: "Reserve Your Royal Stay",
+        hero_cta_gallery: "Explore Photo Gallery",
+        hero_chip_1: "Panoramic Nile Views",
+        hero_chip_2: "Complimentary Nubian Breakfast",
+        hero_chip_3: "9.8/10 Exceptional Rating",
+        badge_peace: "Where Peace Is • Gharb Soheil",
+        gallery_eyebrow: "Real Photo Gallery",
+        gallery_heading: "Live Tour in Kato Waidi House",
+        gallery_subheading: "Experience authentic Nubian architecture: blue domes, sandy courtyards, brick-vaulted suites with green arched river windows, and traditional towel crocodiles.",
+        gal_all: "All (All Photos)",
+        gal_domes: "Nubian Domes & Courtyard",
+        gal_rooms: "Vaulted Suites & Nile Views",
+        gal_felucca: "Felucca & Island Tours",
+        gal_dining: "Dining & Campfire Nights",
+        calc_eyebrow: "Smart Stay Calculator",
+        calc_heading: "Design Your Tailored Royal Stay at Kato Waidi",
+        calc_subheading: "Select your preferred room or suite, length of stay, and bespoke Nubian experiences for an instant calculation and one-click direct booking.",
+        calc_lbl_room: "Nubian Room or Suite Category:",
+        calc_lbl_nights: "Duration of Stay:",
+        unit_nights: "nights",
+        calc_lbl_guests: "Number of Guests:",
+        calc_lbl_addons: "Signature Nubian Experiences & Add-ons:",
+        addon_felucca: "Sunset Nile Felucca Sailing (+650 EGP)",
+        addon_dinner: "Gourmet Riverside Nubian Dinner (+450 EGP/guest)",
+        addon_transfer: "Private Boat Transfer from Airport/Station (+500 EGP)",
+        addon_music: "Nubian Campfire Oud & Drums Night (+400 EGP)",
+        calc_sum_title: "Estimated Package Total",
+        calc_tax_included: "Inclusive of royal Nubian breakfast & taxes",
+        bd_room_cost: "Accommodation Cost:",
+        bd_addons_cost: "Experiences & Add-ons:",
+        calc_btn_add: "Add Package to Booking Cart",
+        catalog_eyebrow: "Integrated Booking & Dining Engine",
+        catalog_heading: "Choose Your Rooms, Meals & Nile Excursions",
+        catalog_subheading: "Explore tranquil heritage rooms overlooking the Nile, timeless felucca voyages, and authentic Nubian culinary recipes. Add to cart in one click.",
+        filter_all: "All (الكل)",
+        filter_rooms: "Nile Rooms & Suites",
+        filter_experiences: "Felucca & Nile Tours",
+        filter_tagines: "Nubian Tagines & Mains",
+        filter_breakfast: "Breakfast & Bakery",
+        filter_drinks: "Fresh Drinks & Botanicals",
+        rating_exceptional: "Exceptional • 9.8 / 10",
+        rating_based_on: "Based on 850+ verified guest reviews at Kato Waidi",
+        metric_view: "Nile View & Tranquility:",
+        metric_staff: "Nubian Hospitality & Staff:",
+        metric_clean: "Cleanliness & Comfort:",
+        metric_food: "Nubian Cuisine Quality:",
+        am_1_title: "Panoramic Nile Terrace",
+        am_1_sub: "Prime relaxation seating right over the water",
+        am_2_title: "Private Felucca Jetty",
+        am_2_sub: "Sail on traditional boats from our doorstep",
+        am_3_title: "High-Speed Wi-Fi",
+        am_3_sub: "Fast optical coverage in rooms and open terraces",
+        am_4_title: "24/7 Room Concierge",
+        am_4_sub: "Warm Nubian hosts attentive to every detail",
+        cart_drawer_title: "Booking & Orders Cart",
+        cart_empty_title: "Your Cart is Currently Empty",
+        cart_empty_sub: "Add a room, felucca tour, or signature Nubian meal to finalize your VIP reservation.",
+        guest_form_title: "Guest Details for Official Confirmation:",
+        cart_total_label: "Grand Total:",
+        cart_btn_checkout: "Send Official VIP Invoice to WhatsApp",
+        chat_tooltip: "Nubian Concierge Assistant",
+        chat_host_title: "Smart Nubian Concierge",
+        chat_status_online: "Online & Ready to Assist",
+        chat_welcome_msg: "Welcome to Kato Waidi! I am your dedicated Nubian host assistant here to answer questions regarding rooms, felucca cruises, and how to reach us in Gharb Soheil. How may I help you today?",
+        chip_loc: "📍 How to reach Gharb Soheil",
+        chip_felucca: "⛵ Felucca Cruise Timings",
+        chip_dining: "🍲 Breakfast & Dining Hours",
+        chip_direct_wa: "📲 Chat with Host on WhatsApp",
+        footer_about: "The official luxury edition of Kato Waidi Nubian House. A holistic hospitality sanctuary combining the enchantment of the Nile with legendary Nubian warmth.",
+        footer_quick_links: "Quick Links",
+        footer_contacts: "Direct Contact",
+        footer_address: "Gharb Soheil, Aswan, Arab Republic of Egypt",
+        footer_guarantee: "Kato Waidi Guarantee",
+        footer_guar_text: "Best rate guarantee for direct bookings via website or WhatsApp, with a complimentary Nubian welcome drink upon arrival.",
+        footer_crafted: "Crafted with highest UI/UX standards & smart booking logic - Gharb Soheil, Aswan",
+        add_btn: "Add to Cart",
+        currency: "EGP"
+      }
+    };
+
+    /* ==========================================================================
+       4. Localization & Theme Switcher
+       ========================================================================== */
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+      document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+      const langLabel = document.getElementById('langLabel');
+      if (langLabel) langLabel.textContent = (lang === 'ar') ? 'EN' : 'عربي';
+
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (i18n[lang] && i18n[lang][key]) {
+          el.textContent = i18n[lang][key];
+        }
+      });
+
+      renderGalleryGrid();
+      renderCatalogGrid();
+      calculateStayCost();
+      renderCartDrawer();
+    }
+
+    document.getElementById('langToggleBtn').addEventListener('click', () => {
+      setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+    });
+
+    function setTheme(theme) {
+      currentTheme = theme;
+      document.documentElement.setAttribute('data-theme', theme);
+      const icon = document.getElementById('themeIcon');
+      if (icon) icon.textContent = (theme === 'dark') ? '☀️' : '🌙';
+      try { localStorage.setItem('kato_waidi_theme', theme); } catch(e) {}
+    }
+
+    document.getElementById('themeToggleBtn').addEventListener('click', () => {
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
+    /* ==========================================================================
+       5. Interactive Lightbox Photo Gallery Rendering
+       ========================================================================== */
+    function filterGallery(category, btnEl) {
+      currentGalleryCategory = category;
+      document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      renderGalleryGrid();
+    }
+
+    function renderGalleryGrid() {
+      const grid = document.getElementById('galleryGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      filteredGalleryItems = GALLERY_IMAGES.filter(item => {
+        return (currentGalleryCategory === 'all') || (item.category === currentGalleryCategory);
+      });
+
+      filteredGalleryItems.forEach((item, index) => {
+        const title = (currentLang === 'ar') ? item.title_ar : item.title_en;
+        const desc = (currentLang === 'ar') ? item.desc_ar : item.desc_en;
+        const badge = (currentLang === 'ar') ? item.badge_ar : item.badge_en;
+
+        const card = document.createElement('div');
+        card.className = 'gallery-card';
+        card.onclick = () => openLightbox(index);
+
+        card.innerHTML = `
+          <div class="gallery-thumb-frame">
+            <img src="${item.url}" alt="${title}" loading="lazy">
+            <span class="gallery-overlay-badge">${badge}</span>
+            <div class="gallery-zoom-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="gallery-card-info">
+            <h4 class="gallery-card-title">${title}</h4>
+            <p class="gallery-card-desc">${desc}</p>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function openLightbox(index) {
+      activeLightboxIndex = index;
+      updateLightboxContent();
+      document.getElementById('lightboxModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeLightboxOnBackdrop(e) {
+      if (e.target.id === 'lightboxModal') {
+        closeLightbox();
+      }
+    }
+
+    function updateLightboxContent() {
+      if (!filteredGalleryItems[activeLightboxIndex]) return;
+      const item = filteredGalleryItems[activeLightboxIndex];
+      const title = (currentLang === 'ar') ? item.title_ar : item.title_en;
+      const desc = (currentLang === 'ar') ? item.desc_ar : item.desc_en;
+
+      document.getElementById('lightboxImg').src = item.url;
+      document.getElementById('lightboxTitle').textContent = title;
+      document.getElementById('lightboxDesc').textContent = desc;
+      document.getElementById('lightboxCounter').textContent = `${activeLightboxIndex + 1} / ${filteredGalleryItems.length}`;
+    }
+
+    function nextLightboxSlide() {
+      activeLightboxIndex = (activeLightboxIndex + 1) % filteredGalleryItems.length;
+      updateLightboxContent();
+    }
+
+    function prevLightboxSlide() {
+      activeLightboxIndex = (activeLightboxIndex - 1 + filteredGalleryItems.length) % filteredGalleryItems.length;
+      updateLightboxContent();
+    }
+
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextLightboxSlide();
+      if (e.key === 'ArrowLeft') prevLightboxSlide();
+    });
+
+    /* ==========================================================================
+       6. Stay Calculator Engine
+       ========================================================================== */
+    function updateNightsVal(val) {
+      document.getElementById('nightsValDisplay').textContent = val;
+      calculateStayCost();
+    }
+
+    function calculateStayCost() {
+      const roomSelect = document.getElementById('calcRoomSelect');
+      const nights = parseInt(document.getElementById('nightsSlider').value, 10) || 1;
+      const guests = parseInt(document.getElementById('guestsSelect').value, 10) || 2;
+      const roomPrice = parseInt(roomSelect.value, 10) || 2900;
+
+      const roomTotal = roomPrice * nights;
+      let addonsTotal = 0;
+      if (document.getElementById('addonFelucca').checked) addonsTotal += 650;
+      if (document.getElementById('addonDinner').checked) addonsTotal += (450 * guests);
+      if (document.getElementById('addonBoatTransfer').checked) addonsTotal += 500;
+      if (document.getElementById('addonOudNight').checked) addonsTotal += 400;
+
+      const grandTotal = roomTotal + addonsTotal;
+      animatePrice(document.getElementById('calcTotalNumber'), grandTotal);
+
+      const currencyStr = (currentLang === 'ar') ? 'ج.م' : 'EGP';
+      document.getElementById('calcCurrencyLabel').textContent = currencyStr;
+      document.getElementById('bdRoomCost').textContent = `${roomTotal.toLocaleString()} ${currencyStr}`;
+      document.getElementById('bdAddonsCost').textContent = `${addonsTotal.toLocaleString()} ${currencyStr}`;
+    }
+
+    function animatePrice(el, target) {
+      if (!el) return;
+      const start = parseInt(el.textContent.replace(/,/g, ''), 10) || 0;
+      const duration = 250;
+      const startTime = performance.now();
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = Math.floor(start + (target - start) * progress);
+        el.textContent = current.toLocaleString();
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    function addCalculatedStayToCart() {
+      const roomSelect = document.getElementById('calcRoomSelect');
+      const selectedOption = roomSelect.options[roomSelect.selectedIndex];
+      const nights = document.getElementById('nightsSlider').value;
+      const guests = document.getElementById('guestsSelect').value;
+
+      const roomOnlyAr = selectedOption.getAttribute('data-name-ar') || selectedOption.text;
+      const roomOnlyEn = selectedOption.getAttribute('data-name-en') || selectedOption.text;
+      const roomNameAr = `${roomOnlyAr} (${nights} ليالٍ / ${guests} نزلاء)`;
+      const roomNameEn = `${roomOnlyEn} (${nights} nights / ${guests} guests)`;
+      const roomPrice = parseInt(roomSelect.value, 10) * parseInt(nights, 10);
+
+      const stayItemId = `stay_${Date.now()}`;
+      cart[stayItemId] = {
+        id: stayItemId,
+        name_ar: roomNameAr,
+        name_en: roomNameEn,
+        room_only_name_ar: roomOnlyAr,
+        room_only_name_en: roomOnlyEn,
+        nights: nights,
+        guests: guests,
+        is_room: true,
+        category: 'rooms',
+        price: roomPrice,
+        qty: 1,
+        img: catalogData[0].img
+      };
+
+      if (document.getElementById('addonFelucca').checked) {
+        addToCartById('tour_sunset_felucca', false);
+      }
+      if (document.getElementById('addonDinner').checked) {
+        addToCartById('food_lamb_okra_tagine', false);
+      }
+
+      updateCartBadge();
+      renderCartDrawer();
+      openCartDrawer();
+      showToast(currentLang === 'ar' ? '✨ تمت إضافة باقة الإقامة بنجاح إلى سلة الحجز!' : '✨ Stay package added to your cart successfully!');
+    }
+
+    /* ==========================================================================
+       7. Catalog Filter & Rendering
+       ========================================================================== */
+    function filterCatalog(category, btnEl) {
+      currentCatalogCategory = category;
+      document.querySelectorAll('.filter-chip-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      renderCatalogGrid();
+    }
+
+    function renderCatalogGrid() {
+      const grid = document.getElementById('catalogCardsGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      const filtered = catalogData.filter(item => {
+        return (currentCatalogCategory === 'all') || (item.category === currentCatalogCategory);
+      });
+
+      filtered.forEach(item => {
+        const title = (currentLang === 'ar') ? item.name_ar : item.name_en;
+        const desc = (currentLang === 'ar') ? item.desc_ar : item.desc_en;
+        const currency = (currentLang === 'ar') ? 'ج.م' : 'EGP';
+
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="card-thumb-frame">
+            <img src="${item.img}" alt="${title}" loading="lazy">
+          </div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h4 class="card-title">${title}</h4>
+              <div class="card-price-badge">${item.price.toLocaleString()} ${currency}</div>
+            </div>
+            <p class="card-desc">${desc}</p>
+            <div class="card-footer-actions">
+              <button class="btn-add-cart" onclick="addToCartById('${item.id}', true)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                <span>${i18n[currentLang].add_btn}</span>
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    /* ==========================================================================
+       8. Unified Slide-out Smart Cart
+       ========================================================================== */
+    function addToCartById(id, showToastMsg = true) {
+      const product = catalogData.find(p => p.id === id);
+      if (!product) return;
+
+      if (!cart[id]) {
+        cart[id] = {
+          id: product.id,
+          name_ar: product.name_ar,
+          name_en: product.name_en,
+          price: product.price,
+          qty: 1,
+          img: product.img
+        };
+      } else {
+        cart[id].qty += 1;
+      }
+
+      updateCartBadge();
+      renderCartDrawer();
+
+      if (showToastMsg) {
+        const title = (currentLang === 'ar') ? product.name_ar : product.name_en;
+        showToast(`${currentLang === 'ar' ? 'تمت إضافة' : 'Added'}: ${title} (+1)`);
+      }
+    }
+
+    function changeCartItemQty(id, delta) {
+      if (!cart[id]) return;
+      cart[id].qty += delta;
+      if (cart[id].qty <= 0) delete cart[id];
+      updateCartBadge();
+      renderCartDrawer();
+    }
+
+    function removeCartItem(id) {
+      if (cart[id]) {
+        delete cart[id];
+        updateCartBadge();
+        renderCartDrawer();
+      }
+    }
+
+    function updateCartBadge() {
+      let count = 0;
+      for (const k in cart) count += cart[k].qty;
+      const badge = document.getElementById('cartCountBadge');
+      if (badge) badge.textContent = count;
+    }
+
+    function renderCartDrawer() {
+      const container = document.getElementById('cartItemsList');
+      const emptyState = document.getElementById('cartEmptyState');
+      const form = document.getElementById('cartGuestForm');
+      const totalDisplay = document.getElementById('cartGrandTotalVal');
+      const currencyBadge = document.getElementById('cartCurrencyBadge');
+
+      if (!container || !emptyState) return;
+      container.innerHTML = '';
+
+      let total = 0;
+      let count = 0;
+
+      for (const key in cart) {
+        const item = cart[key];
+        const lineTotal = item.price * item.qty;
+        total += lineTotal;
+        count += item.qty;
+
+        const title = (currentLang === 'ar') ? item.name_ar : item.name_en;
+        const el = document.createElement('div');
+        el.className = 'cart-item-card';
+        el.innerHTML = `
+          <div class="cart-item-thumb"><img src="${item.img}" alt="${title}"></div>
+          <div class="cart-item-details">
+            <div class="cart-item-name">${title}</div>
+            <div class="cart-item-price">${lineTotal.toLocaleString()} ${currentLang === 'ar' ? 'ج.م' : 'EGP'}</div>
+          </div>
+          <div class="cart-qty-controls">
+            <button class="qty-btn" onclick="changeCartItemQty('${item.id}', -1)">-</button>
+            <span style="font-size:0.9rem; font-weight:800; min-width:18px; text-align:center;">${item.qty}</span>
+            <button class="qty-btn" onclick="changeCartItemQty('${item.id}', 1)">+</button>
+          </div>
+          <button style="background:none; border:none; color:var(--text-muted); cursor:pointer; padding:4px;" onclick="removeCartItem('${item.id}')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          </button>
+        `;
+        container.appendChild(el);
+      }
+
+      if (count === 0) {
+        emptyState.style.display = 'block';
+        if (form) form.style.display = 'none';
+        if (totalDisplay) totalDisplay.textContent = '0';
+      } else {
+        emptyState.style.display = 'none';
+        if (form) form.style.display = 'flex';
+        if (totalDisplay) totalDisplay.textContent = total.toLocaleString();
+      }
+
+      if (currencyBadge) {
+        currencyBadge.textContent = (currentLang === 'ar') ? 'ج.م' : 'EGP';
+      }
+    }
+
+    function openCartDrawer() {
+      document.getElementById('cartDrawerOverlay').classList.add('active');
+    }
+
+    function closeCartDrawer() {
+      document.getElementById('cartDrawerOverlay').classList.remove('active');
+    }
+
+    document.getElementById('cartTriggerBtn').addEventListener('click', openCartDrawer);
+    document.getElementById('closeDrawerBtn').addEventListener('click', closeCartDrawer);
+    document.getElementById('cartDrawerOverlay').addEventListener('click', (e) => {
+      if (e.target.id === 'cartDrawerOverlay') closeCartDrawer();
+    });
+
+    /* ==========================================================================
+       9. Production WhatsApp Message Functions (+201222237078)
+       ========================================================================== */
+    function openWhatsAppUrl(messageText) {
+      if (!messageText) return;
+      const encoded = encodeURIComponent(messageText.trim());
+      const targetUrl = `https://wa.me/${TARGET_WHATSAPP}?text=${encoded}`;
+
+      showToast(currentLang === 'ar' ? '🚀 جاري تحويلك إلى واتساب كاتو ويدي...' : '🚀 Redirecting to Kato Waidi WhatsApp...');
+
+      setTimeout(() => {
+        window.open(targetUrl, '_blank', 'noopener,noreferrer');
+      }, 500);
+    }
+
+    function checkoutViaWhatsApp() {
+      const keys = Object.keys(cart);
+      if (keys.length === 0) {
+        showToast(currentLang === 'ar' ? '⚠️ سلة الحجز فارغة! الرجاء اختيار غرفة أو طلب من المنيو أولاً.' : '⚠️ Cart is empty! Please choose a room or menu item first.');
+        return;
+      }
+
+      // Separate rooms vs menu items
+      const roomItems = [];
+      const menuItems = [];
+      let grandTotal = 0;
+
+      keys.forEach(k => {
+        const itm = cart[k];
+        const lineTotal = itm.price * itm.qty;
+        grandTotal += lineTotal;
+
+        if (itm.category === 'rooms' || itm.is_room) {
+          roomItems.push(itm);
+        } else {
+          menuItems.push(itm);
+        }
+      });
+
+      let whatsappMsg = "";
+
+      // 1. للغرف والحاسبة
+      if (roomItems.length > 0) {
+        const primaryRoom = roomItems[0];
+        const roomName = (currentLang === 'ar')
+          ? (primaryRoom.room_only_name_ar || primaryRoom.name_ar)
+          : (primaryRoom.room_only_name_en || primaryRoom.name_en);
+
+        const nights = primaryRoom.nights || document.getElementById('nightsSlider')?.value || 1;
+
+        if (currentLang === 'ar') {
+          whatsappMsg = 
+`السلام عليكم، لو سمحت كنت عايز أحجز عندكم في كاتو وايدي:
+- الغرفة: ${roomName}
+- عدد الليالي: ${nights}
+- السعر اللي ظهرلي: ${grandTotal.toLocaleString()} ج.م
+يا ريت تقولي لو متاحة وإزاي أكد الحجز؟ شكراً.
+---
+🔒 (معاينة حية من النسخة التجريبية - لتفعيل النسخة الكاملة تواصل مع المطور)`;
+        } else {
+          whatsappMsg = 
+`Hello, I would like to book at Kato Waidi:
+- Room: ${roomName}
+- Number of Nights: ${nights}
+- Total Shown: ${grandTotal.toLocaleString()} EGP
+Please let me know if it's available and how to confirm the booking? Thank you.
+---
+🔒 (Live demo preview - to activate full version contact developer)`;
+        }
+      }
+      // 2. لطلبات المنيو
+      else {
+        const orderSummaryAr = menuItems.map(m => `${m.name_ar}${m.qty > 1 ? ` (عدد ${m.qty})` : ''}`).join(' + ');
+        const orderSummaryEn = menuItems.map(m => `${m.name_en}${m.qty > 1 ? ` (Qty ${m.qty})` : ''}`).join(' + ');
+
+        if (currentLang === 'ar') {
+          whatsappMsg = 
+`السلام عليكم، لو سمحت عايز أطلب الأوردر ده من المنيو:
+- الطلب: ${orderSummaryAr}
+- الحساب: ${grandTotal.toLocaleString()} ج.م
+هياخد وقت قد إيه؟
+---
+🔒 (معاينة حية من النسخة التجريبية - لتفعيل النسخة الكاملة تواصل مع المطور)`;
+        } else {
+          whatsappMsg = 
+`Hello, I would like to order this from the menu:
+- Order: ${orderSummaryEn}
+- Total: ${grandTotal.toLocaleString()} EGP
+How long will it take?
+---
+🔒 (Live demo preview - to activate full version contact developer)`;
+        }
+      }
+
+      openWhatsAppUrl(whatsappMsg);
+    }
+
+    function sendCalculatorBookingWhatsApp() {
+      const roomSelect = document.getElementById('calcRoomSelect');
+      const selectedOption = roomSelect.options[roomSelect.selectedIndex];
+      const roomName = (currentLang === 'ar')
+        ? (selectedOption.getAttribute('data-name-ar') || selectedOption.text)
+        : (selectedOption.getAttribute('data-name-en') || selectedOption.text);
+      const nights = document.getElementById('nightsSlider')?.value || 1;
+      const total = document.getElementById('calcTotalNumber')?.textContent || '';
+
+      let msg = '';
+      if (currentLang === 'ar') {
+        msg = 
+`السلام عليكم، لو سمحت كنت عايز أحجز عندكم في كاتو وايدي:
+- الغرفة: ${roomName}
+- عدد الليالي: ${nights}
+- السعر اللي ظهرلي: ${total} ج.م
+يا ريت تقولي لو متاحة وإزاي أكد الحجز؟ شكراً.
+---
+🔒 (معاينة حية من النسخة التجريبية - لتفعيل النسخة الكاملة تواصل مع المطور)`;
+      } else {
+        msg = 
+`Hello, I would like to book at Kato Waidi:
+- Room: ${roomName}
+- Number of Nights: ${nights}
+- Total Shown: ${total} EGP
+Please let me know if it's available and how to confirm the booking? Thank you.
+---
+🔒 (Live demo preview - to activate full version contact developer)`;
+      }
+      openWhatsAppUrl(msg);
+    }
+
+    function sendMenuOrderWhatsApp(nameAr, nameEn, price) {
+      const name = (currentLang === 'ar') ? nameAr : nameEn;
+      let msg = '';
+      if (currentLang === 'ar') {
+        msg = 
+`السلام عليكم، لو سمحت عايز أطلب الأوردر ده من المنيو:
+- الطلب: ${name}
+- الحساب: ${price} ج.م
+هياخد وقت قد إيه؟
+---
+🔒 (معاينة حية من النسخة التجريبية - لتفعيل النسخة الكاملة تواصل مع المطور)`;
+      } else {
+        msg = 
+`Hello, I would like to order this from the menu:
+- Order: ${name}
+- Total: ${price} EGP
+How long will it take?
+---
+🔒 (Live demo preview - to activate full version contact developer)`;
+      }
+      openWhatsAppUrl(msg);
+    }
+
+    /* ==========================================================================
+       10. Interactive Nubian Concierge AI Assistant
+       ========================================================================== */
+    function toggleConciergeChat() {
+      document.getElementById('conciergeWindow').classList.toggle('active');
+    }
+
+    function handleQuickChat(topic) {
+      if (topic === 'location') {
+        addChatMessage(currentLang === 'ar' ? 'كيف أصل إلى كاتو ويدي في غرب سهيل؟' : 'How do I get to Kato Waidi in Gharb Soheil?', 'user');
+        setTimeout(() => {
+          const resp = (currentLang === 'ar')
+            ? '📍 موقعنا في قلب قرية غرب سهيل بأسوان مباشرة على النيل. من مطار أسوان تستغرق الرحلة حوالي 20 دقيقة بالسيارة، أو يمكنك الوصول بالمعدية النيلية من كورنيش أسوان. كما نوفر خدمة نقل خاصة باللانش النهري لضيوفنا مباشرة إلى عتبة البيت!'
+            : '📍 We are located directly on the Nile in Gharb Soheil village. It takes ~20 min by car from Aswan Airport, or a scenic boat crossing from Aswan Corniche. We also arrange private boat pickups directly to our jetty!';
+          addChatMessage(resp, 'host');
+        }, 400);
+      } else if (topic === 'felucca') {
+        addChatMessage(currentLang === 'ar' ? 'ما هي مواعيد رحلات الفلوكة النيلية؟' : 'What are the Felucca sailing timings?', 'user');
+        setTimeout(() => {
+          const resp = (currentLang === 'ar')
+            ? '⛵ تنطلق رحلات الفلوكة اليومية طوال النهار، وأجمل موعد هو رحلة الغروب الذهبية (تبدأ من 4:00 عصراً حتى 6:00 مساءً) حيث تبحر الفلوكة بين جزر الشلال الأول مع الكركديه الساخن. يمكنك إضافتها لسلة الحجز الآن!'
+            : '⛵ Felucca tours run throughout the day. The most magical slot is our Sunset Sail (4:00 PM - 6:00 PM) around the cataract islands with hot hibiscus tea. You can add it directly to your cart above!';
+          addChatMessage(resp, 'host');
+        }, 400);
+      } else if (topic === 'dining') {
+        addChatMessage(currentLang === 'ar' ? 'ما هي مواعيد الإفطار والعشاء في كاتو ويدي؟' : 'What are the breakfast and dining hours?', 'user');
+        setTimeout(() => {
+          const resp = (currentLang === 'ar')
+            ? '🍲 الإفطار النوبي الملكي يُقدم يومياً من 7:30 صباحاً حتى 11:30 ظهراً على التراس النيلي. أما المنيو والمطعم فيعمل حتى الساعة 11:00 مساءً لتقديم أشهى طواجن البامية والسمك النيلي والمشاوي الطازجة.'
+            : '🍲 Royal Nubian Breakfast is served from 7:30 AM to 11:30 AM on the Nile terrace. Our kitchen & dining menu runs until 11:00 PM serving fresh tagines, Nile fish, and charcoal grills.';
+          addChatMessage(resp, 'host');
+        }, 400);
+      } else if (topic === 'whatsapp') {
+        window.open(`https://wa.me/${TARGET_WHATSAPP}?text=${encodeURIComponent(currentLang === 'ar' ? 'مرحباً كاتو ويدي، أرغب في الاستفسار والحجز مباشرة معكم.' : 'Hello Kato Waidi, I would like to inquire and book directly.')}`, '_blank');
+      }
+    }
+
+    function sendChatMessage() {
+      const input = document.getElementById('chatInputText');
+      const text = input.value.trim();
+      if (!text) return;
+      addChatMessage(text, 'user');
+      input.value = '';
+
+      setTimeout(() => {
+        const q = text.toLowerCase();
+        let reply = (currentLang === 'ar')
+          ? 'يسعدنا دائماً استقبال استفساراتكم! يمكنك أيضاً الضغط على زر الواتساب للتحدث مباشرة مع مضيفك النوبي هاتفياً أو كتابياً لتنسيق أي رغبات مخصصة.'
+          : 'We are delighted to assist! You can also click the WhatsApp button to chat directly with your Nubian host for tailored arrangements.';
+
+        if (q.includes('غرفة') || q.includes('حجز') || q.includes('سعر') || q.includes('room') || q.includes('price')) {
+          reply = (currentLang === 'ar')
+            ? '🏛️ لدينا باقة مميزة من الغرف والأجنحة النوبية المطلة على النيل بأسعار تبدأ من 2,400 ج.م شاملة الإفطار الملكي والضريبة. يمكنك اختيار غرفتك وتحديد المدة في حاسبة الإقامة بأعلى الصفحة!'
+            : '🏛️ We offer bespoke Nubian rooms & suites overlooking the Nile starting from 2,400 EGP including royal breakfast and taxes. You can calculate and customize your stay above!';
+        } else if (q.includes('أكل') || q.includes('طعام') || q.includes('منيو') || q.includes('food') || q.includes('menu')) {
+          reply = (currentLang === 'ar')
+            ? '🥘 أكلاتنا نوبية ومصرية أصيلة 100%، أشهرها طاجن البامية باللحم الضاني في الفخار، سمك النيل بالطحينة، والمشاوي على الفحم. تصفح قسم المنيو لإضافتها لسلتك.'
+            : '🥘 Our kitchen prepares 100% authentic Nubian and Egyptian delights: lamb okra tagines in clay pots, fresh Nile fish with tahini, and charcoal grills. Check the menu section above!';
+        }
+        addChatMessage(reply, 'host');
+      }, 500);
+    }
+
+    function addChatMessage(msg, sender) {
+      const body = document.getElementById('chatMessagesBody');
+      const div = document.createElement('div');
+      div.className = `chat-message ${sender}`;
+      div.textContent = msg;
+      body.appendChild(div);
+      body.scrollTop = body.scrollHeight;
+    }
+
+    /* ==========================================================================
+       11. Toast Notifications
+       ========================================================================== */
+    function showToast(msg) {
+      const toast = document.getElementById('appToast');
+      const text = document.getElementById('toastMessage');
+      if (!toast || !text) return;
+      text.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); }, 4000);
+    }
+
+    /* ==========================================================================
+       Initial Boot
+       ========================================================================== */
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('kato_waidi_theme') || 'dark';
+      setTheme(savedTheme);
+      setLanguage('ar');
+    });
+  </script>
+</body>
+</html>
